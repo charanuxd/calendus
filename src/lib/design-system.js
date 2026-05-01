@@ -607,62 +607,58 @@ export const ICON_SIZES = {
 }
 
 // ─────────────────────────────────────────────────────────────
-// SVG ILLUSTRATIONS — BESPOKE, CUSTOM-TAILORED
+// SVG ILLUSTRATIONS — BESPOKE, CUSTOM-TAILORED (Function-based)
 // ─────────────────────────────────────────────────────────────
 
-export const ILLUSTRATIONS = {
-  booking: (colors) => `
-    <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <rect x="20" y="20" width="160" height="160" rx="16" fill="${colors.bg?.secondary}" stroke="${colors.border?.default}" stroke-width="2"/>
-      <g opacity="0.1">
-        <circle cx="60" cy="60" r="20" fill="${colors.primary?.[500]}"/>
-        <circle cx="140" cy="140" r="20" fill="${colors.accent?.[500]}"/>
-      </g>
-      <path d="M 40 60 L 80 80 L 100 70 L 120 85 L 160 60" stroke="${colors.primary?.[500]}" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-      <rect x="40" y="100" width="120" height="50" rx="8" fill="${colors.primary?.[50]}" stroke="${colors.primary?.[300]}" stroke-width="1.5"/>
-      <text x="100" y="125" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-size="14" fill="${colors.text?.primary}" font-weight="600">Schedule Time</text>
-    </svg>
-  `,
+const createSVG = (viewBox, content) =>
+  `<svg viewBox="${viewBox}" fill="none" xmlns="http://www.w3.org/2000/svg">${content}</svg>`
 
-  routines: (colors) => `
-    <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <rect x="20" y="20" width="160" height="160" rx="16" fill="${colors.bg?.secondary}" stroke="${colors.border?.default}" stroke-width="2"/>
-      <circle cx="100" cy="100" r="60" fill="none" stroke="${colors.primary?.[500]}" stroke-width="2" opacity="0.2"/>
-      <circle cx="100" cy="100" r="40" fill="none" stroke="${colors.accent?.[500]}" stroke-width="2.5"/>
-      <circle cx="100" cy="55" r="6" fill="${colors.primary?.[500]}"/>
-      <circle cx="140" cy="100" r="6" fill="${colors.accent?.[500]}"/>
-      <circle cx="100" cy="145" r="6" fill="${colors.primary?.[500]}"/>
-      <circle cx="60" cy="100" r="6" fill="${colors.accent?.[500]}"/>
-      <text x="100" y="175" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-size="12" fill="${colors.text?.secondary}" font-weight="500">Daily Routines</text>
-    </svg>
-  `,
+export const getIllustration = {
+  booking: (colors) =>
+    createSVG(
+      '0 0 200 200',
+      `<rect x="20" y="20" width="160" height="160" rx="16" fill="${colors.bg?.secondary}" stroke="${colors.border?.default}" stroke-width="2"/>
+       <g opacity="0.1"><circle cx="60" cy="60" r="20" fill="${colors.primary?.[500]}"/><circle cx="140" cy="140" r="20" fill="${colors.accent?.[500]}"/></g>
+       <path d="M 40 60 L 80 80 L 100 70 L 120 85 L 160 60" stroke="${colors.primary?.[500]}" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+       <rect x="40" y="100" width="120" height="50" rx="8" fill="${colors.primary?.[50]}" stroke="${colors.primary?.[300]}" stroke-width="1.5"/>
+       <text x="100" y="125" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-size="14" fill="${colors.text?.primary}" font-weight="600">Schedule Time</text>`
+    ),
 
-  calendar: (colors) => `
-    <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <rect x="20" y="20" width="160" height="160" rx="16" fill="${colors.bg?.secondary}" stroke="${colors.border?.default}" stroke-width="2"/>
-      <rect x="40" y="40" width="120" height="110" rx="8" fill="${colors.primary?.[50]}" stroke="${colors.primary?.[200]}" stroke-width="1.5"/>
-      <line x1="50" y1="70" x2="150" y2="70" stroke="${colors.primary?.[300]}" stroke-width="1"/>
-      <line x1="50" y1="90" x2="150" y2="90" stroke="${colors.primary?.[300]}" stroke-width="1"/>
-      <circle cx="70" cy="105" r="4" fill="${colors.accent?.[500]}"/>
-      <circle cx="100" cy="105" r="4" fill="${colors.accent?.[500]}"/>
-      <circle cx="130" cy="105" r="4" fill="${colors.accent?.[500]}"/>
-      <rect x="50" y="130" width="100" height="8" rx="4" fill="${colors.primary?.[500]}" opacity="0.3"/>
-    </svg>
-  `,
+  routines: (colors) =>
+    createSVG(
+      '0 0 200 200',
+      `<rect x="20" y="20" width="160" height="160" rx="16" fill="${colors.bg?.secondary}" stroke="${colors.border?.default}" stroke-width="2"/>
+       <circle cx="100" cy="100" r="60" fill="none" stroke="${colors.primary?.[500]}" stroke-width="2" opacity="0.2"/>
+       <circle cx="100" cy="100" r="40" fill="none" stroke="${colors.accent?.[500]}" stroke-width="2.5"/>
+       <circle cx="100" cy="55" r="6" fill="${colors.primary?.[500]}"/><circle cx="140" cy="100" r="6" fill="${colors.accent?.[500]}"/>
+       <circle cx="100" cy="145" r="6" fill="${colors.primary?.[500]}"/><circle cx="60" cy="100" r="6" fill="${colors.accent?.[500]}"/>
+       <text x="100" y="175" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-size="12" fill="${colors.text?.secondary}" font-weight="500">Daily Routines</text>`
+    ),
 
-  success: (colors) => `
-    <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <circle cx="100" cy="100" r="80" fill="${colors.accent?.[50]}" stroke="${colors.accent?.[300]}" stroke-width="2"/>
-      <path d="M 70 100 L 90 120 L 135 75" stroke="${colors.accent?.[500]}" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-    </svg>
-  `,
+  calendar: (colors) =>
+    createSVG(
+      '0 0 200 200',
+      `<rect x="20" y="20" width="160" height="160" rx="16" fill="${colors.bg?.secondary}" stroke="${colors.border?.default}" stroke-width="2"/>
+       <rect x="40" y="40" width="120" height="110" rx="8" fill="${colors.primary?.[50]}" stroke="${colors.primary?.[200]}" stroke-width="1.5"/>
+       <line x1="50" y1="70" x2="150" y2="70" stroke="${colors.primary?.[300]}" stroke-width="1"/>
+       <line x1="50" y1="90" x2="150" y2="90" stroke="${colors.primary?.[300]}" stroke-width="1"/>
+       <circle cx="70" cy="105" r="4" fill="${colors.accent?.[500]}"/><circle cx="100" cy="105" r="4" fill="${colors.accent?.[500]}"/><circle cx="130" cy="105" r="4" fill="${colors.accent?.[500]}"/>
+       <rect x="50" y="130" width="100" height="8" rx="4" fill="${colors.primary?.[500]}" opacity="0.3"/>`
+    ),
 
-  empty: (colors) => `
-    <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <rect x="20" y="20" width="160" height="160" rx="16" fill="${colors.bg?.secondary}" stroke="${colors.border?.default}" stroke-width="2" stroke-dasharray="5,5" opacity="0.5"/>
-      <circle cx="100" cy="80" r="30" fill="${colors.primary?.[100]}" opacity="0.3"/>
-      <path d="M 90 70 Q 100 75 110 70" stroke="${colors.text?.secondary}" stroke-width="2" fill="none" stroke-linecap="round"/>
-      <line x1="95" y1="85" x2="105" y2="85" stroke="${colors.text?.secondary}" stroke-width="1.5"/>
-    </svg>
-  `,
+  success: (colors) =>
+    createSVG(
+      '0 0 200 200',
+      `<circle cx="100" cy="100" r="80" fill="${colors.accent?.[50]}" stroke="${colors.accent?.[300]}" stroke-width="2"/>
+       <path d="M 70 100 L 90 120 L 135 75" stroke="${colors.accent?.[500]}" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none"/>`
+    ),
+
+  empty: (colors) =>
+    createSVG(
+      '0 0 200 200',
+      `<rect x="20" y="20" width="160" height="160" rx="16" fill="${colors.bg?.secondary}" stroke="${colors.border?.default}" stroke-width="2" stroke-dasharray="5,5" opacity="0.5"/>
+       <circle cx="100" cy="80" r="30" fill="${colors.primary?.[100]}" opacity="0.3"/>
+       <path d="M 90 70 Q 100 75 110 70" stroke="${colors.text?.secondary}" stroke-width="2" fill="none" stroke-linecap="round"/>
+       <line x1="95" y1="85" x2="105" y2="85" stroke="${colors.text?.secondary}" stroke-width="1.5"/>`
+    ),
 }

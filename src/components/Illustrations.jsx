@@ -1,4 +1,4 @@
-import { ILLUSTRATIONS } from '../lib/design-system'
+import { getIllustration } from '../lib/design-system'
 
 export function BookingIllustration({ colors, size = '120px' }) {
   return (
@@ -11,7 +11,7 @@ export function BookingIllustration({ colors, size = '120px' }) {
         justifyContent: 'center',
       }}
       dangerouslySetInnerHTML={{
-        __html: ILLUSTRATIONS.booking(colors),
+        __html: getIllustration.booking(colors),
       }}
     />
   )
@@ -28,7 +28,7 @@ export function RoutinesIllustration({ colors, size = '120px' }) {
         justifyContent: 'center',
       }}
       dangerouslySetInnerHTML={{
-        __html: ILLUSTRATIONS.routines(colors),
+        __html: getIllustration.routines(colors),
       }}
     />
   )
@@ -45,7 +45,7 @@ export function CalendarIllustration({ colors, size = '120px' }) {
         justifyContent: 'center',
       }}
       dangerouslySetInnerHTML={{
-        __html: ILLUSTRATIONS.calendar(colors),
+        __html: getIllustration.calendar(colors),
       }}
     />
   )
@@ -62,7 +62,7 @@ export function SuccessIllustration({ colors, size = '80px' }) {
         justifyContent: 'center',
       }}
       dangerouslySetInnerHTML={{
-        __html: ILLUSTRATIONS.success(colors),
+        __html: getIllustration.success(colors),
       }}
     />
   )
@@ -79,7 +79,7 @@ export function EmptyStateIllustration({ colors, size = '120px' }) {
         justifyContent: 'center',
       }}
       dangerouslySetInnerHTML={{
-        __html: ILLUSTRATIONS.empty(colors),
+        __html: getIllustration.empty(colors),
       }}
     />
   )
