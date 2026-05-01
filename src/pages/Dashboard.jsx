@@ -167,7 +167,7 @@ export default function Dashboard({ session }) {
         <div style={{ display:"flex", alignItems:"center", gap:12 }}>
           <div style={{ width:36, height:36, borderRadius:10, background:`linear-gradient(135deg, ${PASTEL.accent}, ${PASTEL.mint})`, display:"flex", alignItems:"center", justifyContent:"center", color: PASTEL.white, fontSize:16, fontWeight:700 }}>C</div>
           <div>
-            <h1 style={{ fontSize:17, fontWeight:600, fontFamily:"'Playfair Display', serif" }}>MyCalendly</h1>
+            <h1 style={{ fontSize:17, fontWeight:600, fontFamily:"'Playfair Display', serif" }}>Calendus</h1>
             <p style={{ fontSize:11, color: PASTEL.textLight }}>Hi, {profile?.full_name || session?.user?.email?.split("@")[0]} 👋</p>
           </div>
         </div>

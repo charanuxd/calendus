@@ -1,4 +1,4 @@
-# MyCalendly 🗓️
+# Calendus 🗓️
 
 A personal Calendly-style scheduling app with daily routines, booking pages, and Supabase backend.
 Built with React + Vite. Deployable to GitHub Pages for free.
@@ -8,7 +8,7 @@ Built with React + Vite. Deployable to GitHub Pages for free.
 ## 🗂 Project Structure
 
 ```
-mycalendly/
+calendus/
 ├── public/
 │   └── favicon.svg
 ├── src/
@@ -59,7 +59,7 @@ Edit `.env`:
 ```
 VITE_SUPABASE_URL=https://your-project-id.supabase.co
 VITE_SUPABASE_ANON_KEY=your-anon-key
-VITE_APP_URL=https://yourusername.github.io/mycalendly
+VITE_APP_URL=https://yourusername.github.io/calendus
 ```
 
 ### Step 4 — Run locally
@@ -81,18 +81,18 @@ Open http://localhost:5173 ✅
    Add these 3 secrets:
    - `VITE_SUPABASE_URL`
    - `VITE_SUPABASE_ANON_KEY`
-   - `VITE_APP_URL` → `https://yourusername.github.io/mycalendly`
+   - `VITE_APP_URL` → `https://yourusername.github.io/calendus`
 
 3. Go to **Settings → Pages → Source** → select **GitHub Actions**
 
 4. Update `vite.config.js` base path:
    ```js
-   base: '/mycalendly/',  // your repo name
+   base: '/calendus/',  // your repo name
    ```
 
 5. Push to `main` branch → GitHub Actions auto-deploys! 🎉
 
-Your app will be live at: `https://yourusername.github.io/mycalendly`
+Your app will be live at: `https://yourusername.github.io/calendus`
 
 ---
 

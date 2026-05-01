@@ -39,7 +39,7 @@ export default function Auth() {
         {/* Logo */}
         <div style={{ textAlign:"center", marginBottom:32 }}>
           <div style={{ width:52, height:52, borderRadius:14, background:`linear-gradient(135deg, ${PASTEL.accent}, ${PASTEL.mint})`, display:"flex", alignItems:"center", justifyContent:"center", color: PASTEL.white, fontSize:24, fontWeight:700, margin:"0 auto 12px" }}>C</div>
-          <h1 style={{ fontSize:24, fontWeight:600, fontFamily:"'Playfair Display', serif" }}>MyCalendly</h1>
+          <h1 style={{ fontSize:24, fontWeight:600, fontFamily:"'Playfair Display', serif" }}>Calendus</h1>
           <p style={{ fontSize:13, color: PASTEL.textMuted, marginTop:4 }}>Your personal scheduling rhythm</p>
         </div>
 
