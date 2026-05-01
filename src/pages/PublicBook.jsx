@@ -4,7 +4,7 @@ import { supabase } from '../lib/supabase'
 import { getThemeColors, getComponentTokens, TEXT_STYLES, SPACING, RADIUS, SHADOWS, TRANSITIONS, EASING, ICON_SIZES } from '../lib/design-system'
 import { ThemeContext } from '../lib/theme-context'
 import { SuccessIllustration, BookingIllustration, EmptyStateIllustration } from '../components/Illustrations'
-import { Calendar, Clock, AlertCircle } from 'phosphor-react'
+import { Calendar, Clock, Info } from 'phosphor-react'
 
 const DAYS = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat']
 const FULL_DAYS = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
@@ -422,7 +422,7 @@ export default function PublicBook() {
             {!av.days.includes(dayOfWeek) ? (
               <div style={{ textAlign: 'center', padding: SPACING[6], color: colors.text?.secondary }}>
                 <div style={{ display: 'flex', justifyContent: 'center', marginBottom: SPACING[2] }}>
-                  <AlertCircle size={ICON_SIZES.xl} color={colors.text?.secondary} weight="duotone" />
+                  <Info size={ICON_SIZES.xl} color={colors.text?.secondary} weight="duotone" />
                 </div>
                 <p style={{ ...TEXT_STYLES.bodyMd, margin: 0 }}>Not available on {FULL_DAYS[dayOfWeek]}s</p>
               </div>
