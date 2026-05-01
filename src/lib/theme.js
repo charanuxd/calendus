@@ -48,6 +48,7 @@ export const GLOBAL_CSS = `
 export const DAYS       = ["Sun","Mon","Tue","Wed","Thu","Fri","Sat"]
 export const FULL_DAYS  = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]
 export const MONTHS     = ["January","February","March","April","May","June","July","August","September","October","November","December"]
+export const HOURS      = Array.from({ length: 24 }, (_, i) => i + 1)
 
 export const pad = (n) => String(n).padStart(2, "0")
 export const uid = () => Math.random().toString(36).slice(2, 10)
