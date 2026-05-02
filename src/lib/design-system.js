@@ -1,4 +1,4 @@
-// Calendus Design System v2.0 — Premium, Handcrafted
+// Caloday Design System v2.0 — Premium, Handcrafted
 // Inspired by Linear, Stripe, Superhuman
 // Every pixel intentional. Timeless. Sophisticated.
 

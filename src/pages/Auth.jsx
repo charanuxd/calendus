@@ -174,7 +174,7 @@ export default function Auth() {
               margin: `0 0 ${SPACING[2]} 0`,
             }}
           >
-            Calendus
+            Caloday
           </h1>
 
           <p

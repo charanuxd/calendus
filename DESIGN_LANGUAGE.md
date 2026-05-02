@@ -1,14 +1,14 @@
-# Calendus Design Language & System
+# Caloday Design Language & System
 
 **Version:** 1.0  
 **Last Updated:** May 2026  
-**Maintained by:** Calendus Team
+**Maintained by:** Caloday Team
 
 ---
 
 ## 📖 Overview
 
-Calendus is a personal scheduling app with a focus on clarity, accessibility, and delight. Our design system ensures consistency, scalability, and cohesion across all digital products and experiences.
+Caloday is a personal scheduling app with a focus on clarity, accessibility, and delight. Our design system ensures consistency, scalability, and cohesion across all digital products and experiences.
 
 **Core Design Values:**
 - **Clarity** — Information architecture is logical and intuitive
@@ -294,7 +294,7 @@ Design for mobile first, enhance for larger screens.
 
 - **Design System File:** `src/lib/design-system.js`
 - **Previous Theme:** `src/lib/theme.js` (deprecated, use design-system.js)
-- **Figma File:** [Calendus Design System](#) (coming soon)
+- **Figma File:** [Caloday Design System](#) (coming soon)
 
 ---
 

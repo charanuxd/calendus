@@ -1,4 +1,4 @@
-# Calendus 🗓️
+# Caloday 🗓️
 
 A personal Calendly-style scheduling app with daily routines, booking pages, and Supabase backend.
 Built with React + Vite. Deployable to GitHub Pages for free.
@@ -8,7 +8,7 @@ Built with React + Vite. Deployable to GitHub Pages for free.
 ## 🗂 Project Structure
 
 ```
-calendus/
+caloday/
 ├── public/
 │   └── favicon.svg
 ├── src/

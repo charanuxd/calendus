@@ -67,7 +67,7 @@ export default function Dashboard({ session }) {
                 margin: 0,
               }}
             >
-              📅 Calendus
+              📅 Caloday
             </h1>
             <p
               style={{
