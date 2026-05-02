@@ -1,10 +1,6 @@
-// Caloday Design System v2.0 — Premium, Handcrafted
-// Inspired by Linear, Stripe, Superhuman
-// Every pixel intentional. Timeless. Sophisticated.
-
-// ─────────────────────────────────────────────────────────────
-// THEME MODE DETECTION & MANAGEMENT
-// ─────────────────────────────────────────────────────────────
+// Caloday Design System — "The Still Hour"
+// Built on Ma (間, the meaningful pause) and golden hour warmth.
+// Anchor: Clay terracotta. Typography: Fraunces editorial serif + Inter.
 
 export const THEME_MODES = {
   light: 'light',
@@ -12,197 +8,223 @@ export const THEME_MODES = {
 }
 
 // ─────────────────────────────────────────────────────────────
-// PREMIUM COLOR SYSTEM — LIGHT THEME
+// LIGHT THEME — Bone, Linen, Clay, Moss, Honey, Ink
 // ─────────────────────────────────────────────────────────────
 
 const LIGHT = {
-  // Primary: Deep, sophisticated purple (versatile, timeless)
+  // primary = Clay terracotta (single hero accent)
   primary: {
-    50: '#F8F6FF',
-    100: '#F0EBFF',
-    200: '#E1D7FF',
-    300: '#D3C3FF',
-    400: '#B393FF',
-    500: '#8B5CF6',  // Premium purple
-    600: '#7C3AED',
-    700: '#6D28D9',
-    800: '#5B21B6',
-    900: '#4C1D95',
+    50: '#FBF3EE',
+    100: '#F5E5DA',
+    200: '#EBCBB6',
+    300: '#DDA992',
+    400: '#D2917A',
+    500: '#C97B5F',
+    600: '#B26648',
+    700: '#95523A',
+    800: '#76402E',
+    900: '#5A3024',
   },
 
-  // Secondary: Sophisticated slate (neutral, refined)
+  // secondary = Warm neutral scale (Bone → Smoke → Ink)
+  // CRITICAL: warm, not cool slate. Every disabled state inherits this.
   secondary: {
-    50: '#F9FAFB',
-    100: '#F3F4F6',
-    200: '#E5E7EB',
-    300: '#D1D5DB',
-    400: '#9CA3AF',
-    500: '#6B7280',
-    600: '#4B5563',
-    700: '#374151',
-    800: '#1F2937',
-    900: '#111827',
+    50: '#FAF7F2',
+    100: '#F5F1EA',
+    200: '#EDE6DA',
+    300: '#D8CFC0',
+    400: '#B5A99A',
+    500: '#8C8074',
+    600: '#6E6358',
+    700: '#524841',
+    800: '#3A322D',
+    900: '#27211B',
   },
 
-  // Accent: Vibrant emerald (sophisticated, energetic)
+  // accent = Moss (affirmation, success signal)
   accent: {
-    50: '#F0FDF4',
-    100: '#DCFCE7',
-    200: '#BBF7D0',
-    300: '#86EFAC',
-    400: '#4ADE80',
-    500: '#22C55E',  // Premium green
-    600: '#16A34A',
-    700: '#15803D',
-    800: '#166534',
-    900: '#145231',
+    50: '#F2F4EE',
+    100: '#E2E7D9',
+    200: '#C8D2BB',
+    300: '#A9B89B',
+    400: '#92A382',
+    500: '#7B8A6F',
+    600: '#65745A',
+    700: '#515E48',
+    800: '#404A39',
+    900: '#2F362A',
   },
 
-  // Semantic colors
-  success: '#10B981',
-  warning: '#F59E0B',
-  error: '#EF4444',
-  info: '#3B82F6',
+  // Semantic colors — warm-tuned
+  success: '#7B8A6F',
+  warning: '#D4A668',
+  error: '#B85A3C',
+  info: '#5D6E78',
 
-  // Backgrounds & Surfaces
+  // Named brand tokens (alongside the 9-shade scale)
+  bone: '#FAF7F2',
+  linen: '#F5F1EA',
+  clay: '#C97B5F',
+  moss: '#7B8A6F',
+  honey: '#D4A668',
+  ink: '#27211B',
+  smoke: '#8C8074',
+  ash: '#D8CFC0',
+
+  // Surfaces
   bg: {
-    primary: '#FFFFFF',
-    secondary: '#F9FAFB',
-    tertiary: '#F3F4F6',
-    quaternary: '#EBEBF0',
-    overlay: 'rgba(17, 24, 39, 0.5)',
+    primary: '#FAF7F2',
+    secondary: '#F5F1EA',
+    tertiary: '#EDE6DA',
+    quaternary: '#E5DCD0',
+    overlay: 'rgba(39, 33, 27, 0.5)',
   },
 
   // Text
   text: {
-    primary: '#111827',
-    secondary: '#6B7280',
-    tertiary: '#9CA3AF',
-    inverse: '#FFFFFF',
+    primary: '#27211B',
+    secondary: '#8C8074',
+    tertiary: '#B5A99A',
+    inverse: '#FAF7F2',
   },
 
   // Borders
   border: {
-    default: '#E5E7EB',
-    light: '#F3F4F6',
-    dark: '#D1D5DB',
+    default: '#D8CFC0',
+    light: '#EDE6DA',
+    dark: '#B5A99A',
   },
 
-  // Gradients
+  // Gradients — flat-ish warm washes, not SaaS-y
   gradients: {
-    primary: 'linear-gradient(135deg, #8B5CF6 0%, #7C3AED 100%)',
-    accent: 'linear-gradient(135deg, #22C55E 0%, #10B981 100%)',
-    subtle: 'linear-gradient(135deg, #F9FAFB 0%, #F3F4F6 100%)',
+    primary: 'linear-gradient(135deg, #C97B5F 0%, #B26648 100%)',
+    accent: 'linear-gradient(135deg, #7B8A6F 0%, #65745A 100%)',
+    subtle: 'linear-gradient(180deg, #FAF7F2 0%, #F5F1EA 100%)',
+    dawn: 'linear-gradient(180deg, #FBF3EE 0%, #F5E5DA 100%)',
   },
 }
 
 // ─────────────────────────────────────────────────────────────
-// PREMIUM COLOR SYSTEM — DARK THEME
+// DARK THEME — Onyx, Carbon, Clay-glow, Moss-glow, Cream
 // ─────────────────────────────────────────────────────────────
 
 const DARK = {
-  // Primary: Bright purple (pops in dark mode)
+  // primary = Clay-glow (warmer, lifted for dark surface)
   primary: {
-    50: '#FAF5FF',
-    100: '#F3E8FF',
-    200: '#E9D5FF',
-    300: '#D8B4FE',
-    400: '#C084FC',
-    500: '#A78BFA',  // Bright purple for dark mode
-    600: '#9333EA',
-    700: '#7E22CE',
-    800: '#6B21A8',
-    900: '#581C87',
+    50: '#FBE0CE',
+    100: '#F8CFBA',
+    200: '#F5BFA6',
+    300: '#F0AE91',
+    400: '#ED9F84',
+    500: '#E89B7A',
+    600: '#D38765',
+    700: '#B26C4F',
+    800: '#8E5640',
+    900: '#6B4030',
   },
 
-  // Secondary: Cool slate (dark mode friendly)
+  // secondary = Warm neutral (lightest at 50, deepest at 900 — same convention as LIGHT)
   secondary: {
-    50: '#F8FAFC',
-    100: '#F1F5F9',
-    200: '#E2E8F0',
-    300: '#CBD5E1',
-    400: '#94A3B8',
-    500: '#64748B',
-    600: '#475569',
-    700: '#334155',
-    800: '#1E293B',
-    900: '#0F172A',
+    50: '#FAF7F2',
+    100: '#F5F1EA',
+    200: '#D8CFC0',
+    300: '#B5A99A',
+    400: '#8C8074',
+    500: '#6E6358',
+    600: '#524841',
+    700: '#3A322D',
+    800: '#27211B',
+    900: '#1A1614',
   },
 
-  // Accent: Bright emerald (energetic in dark)
+  // accent = Moss-glow
   accent: {
-    50: '#F0FDF4',
-    100: '#DCFCE7',
-    200: '#BBF7D0',
-    300: '#86EFAC',
-    400: '#4ADE80',
-    500: '#34D399',  // Bright green for dark mode
-    600: '#10B981',
-    700: '#059669',
-    800: '#047857',
-    900: '#065F46',
+    50: '#F0F2EB',
+    100: '#E2E7D9',
+    200: '#C8D2BB',
+    300: '#A9B89B',
+    400: '#92A382',
+    500: '#9CAB91',
+    600: '#889880',
+    700: '#6E7C66',
+    800: '#54604E',
+    900: '#3D4738',
   },
 
   // Semantic colors
-  success: '#10B981',
-  warning: '#FBBF24',
-  error: '#F87171',
-  info: '#60A5FA',
+  success: '#9CAB91',
+  warning: '#E2BF85',
+  error: '#D87B5A',
+  info: '#8DA0AB',
 
-  // Backgrounds & Surfaces
+  // Named brand tokens
+  bone: '#F5F1EA',
+  linen: '#EDE6DA',
+  clay: '#E89B7A',
+  moss: '#9CAB91',
+  honey: '#E2BF85',
+  ink: '#1A1614',
+  smoke: '#B5A99A',
+  ash: '#4A413A',
+
+  // Surfaces — warm dark, never blue-black
   bg: {
-    primary: '#0F172A',    // Deep navy (true dark)
-    secondary: '#1E293B',  // Slightly lighter
-    tertiary: '#334155',   // Card backgrounds
-    quaternary: '#475569', // Hover states
-    overlay: 'rgba(0, 0, 0, 0.6)',
+    primary: '#1A1614',
+    secondary: '#211D1A',
+    tertiary: '#26211D',
+    quaternary: '#322B26',
+    overlay: 'rgba(0, 0, 0, 0.7)',
   },
 
   // Text
   text: {
-    primary: '#F1F5F9',    // Almost white
-    secondary: '#CBD5E1',  // Light gray
-    tertiary: '#94A3B8',   // Muted gray
-    inverse: '#0F172A',    // Dark for inverted
+    primary: '#F5F1EA',
+    secondary: '#B5A99A',
+    tertiary: '#8C8074',
+    inverse: '#27211B',
   },
 
   // Borders
   border: {
-    default: '#334155',    // Visible borders
-    light: '#475569',      // Subtle borders
-    dark: '#1E293B',       // Dark borders
+    default: '#322B26',
+    light: '#26211D',
+    dark: '#4A413A',
   },
 
   // Gradients
   gradients: {
-    primary: 'linear-gradient(135deg, #A78BFA 0%, #C084FC 100%)',
-    accent: 'linear-gradient(135deg, #34D399 0%, #10B981 100%)',
-    subtle: 'linear-gradient(135deg, #1E293B 0%, #334155 100%)',
+    primary: 'linear-gradient(135deg, #E89B7A 0%, #D38765 100%)',
+    accent: 'linear-gradient(135deg, #9CAB91 0%, #889880 100%)',
+    subtle: 'linear-gradient(180deg, #1A1614 0%, #211D1A 100%)',
+    dawn: 'linear-gradient(180deg, #322B26 0%, #211D1A 100%)',
   },
 }
 
 // ─────────────────────────────────────────────────────────────
-// TYPOGRAPHY — PREMIUM STACK
+// TYPOGRAPHY — Fraunces editorial serif + Inter
 // ─────────────────────────────────────────────────────────────
 
 export const TYPOGRAPHY = {
   fontFamily: {
-    sans: "'Space Grotesk', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif",
-    serif: "'Playfair Display', Georgia, serif",
-    mono: "'Fira Code', 'Menlo', 'Monaco', monospace",
+    sans: "'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif",
+    serif: "'Fraunces', Georgia, 'Times New Roman', serif",
+    display: "'Fraunces', Georgia, 'Times New Roman', serif",
+    mono: "ui-monospace, 'SF Mono', 'Menlo', 'Monaco', monospace",
   },
 
   fontSize: {
     xs: '12px',
     sm: '13px',
-    base: '14px',
-    lg: '16px',
-    xl: '18px',
-    '2xl': '20px',
-    '3xl': '24px',
-    '4xl': '30px',
-    '5xl': '36px',
-    '6xl': '48px',
+    base: '15px',
+    lg: '17px',
+    xl: '20px',
+    '2xl': '24px',
+    '3xl': '32px',
+    '4xl': '48px',
+    '5xl': '72px',
+    '6xl': '96px',
+    '7xl': '144px',
+    '8xl': '200px',
   },
 
   fontWeight: {
@@ -211,96 +233,123 @@ export const TYPOGRAPHY = {
     medium: 500,
     semibold: 600,
     bold: 700,
-    extrabold: 800,
   },
 
   lineHeight: {
-    tight: 1.25,
-    snug: 1.375,
+    tight: 1,
+    snug: 1.15,
     normal: 1.5,
-    relaxed: 1.625,
-    loose: 2,
+    relaxed: 1.65,
+    loose: 1.85,
   },
 
   letterSpacing: {
-    tighter: '-0.02em',
-    tight: '-0.01em',
+    tightest: '-0.05em',
+    tighter: '-0.04em',
+    tight: '-0.02em',
     normal: '0em',
-    wide: '0.01em',
-    wider: '0.025em',
+    wide: '0.04em',
+    wider: '0.08em',
   },
 }
 
-// Premium text presets
+// Fraunces variable axis defaults — soft, optical-sized for display
+const FRAUNCES_DISPLAY = '"opsz" 144, "SOFT" 100, "WONK" 0'
+const FRAUNCES_TEXT = '"opsz" 14, "SOFT" 50'
+
+// Editorial text presets
 export const TEXT_STYLES = {
-  // Display: Serif headlines
+  // Display tier — Fraunces editorial moments. Use sparingly.
+  displayHero: {
+    fontSize: '96px',
+    fontWeight: 300,
+    lineHeight: 0.95,
+    fontFamily: TYPOGRAPHY.fontFamily.display,
+    letterSpacing: '-0.04em',
+    fontStyle: 'italic',
+    fontVariationSettings: FRAUNCES_DISPLAY,
+  },
+  displayNumeral: {
+    fontSize: '200px',
+    fontWeight: 200,
+    lineHeight: 0.85,
+    fontFamily: TYPOGRAPHY.fontFamily.display,
+    letterSpacing: '-0.05em',
+    fontVariationSettings: FRAUNCES_DISPLAY,
+  },
   displayLarge: {
-    fontSize: '48px',
-    fontWeight: 700,
-    lineHeight: 1.2,
-    fontFamily: TYPOGRAPHY.fontFamily.serif,
-    letterSpacing: '-0.02em',
+    fontSize: '72px',
+    fontWeight: 400,
+    lineHeight: 1,
+    fontFamily: TYPOGRAPHY.fontFamily.display,
+    letterSpacing: '-0.03em',
+    fontVariationSettings: FRAUNCES_DISPLAY,
   },
   displayMedium: {
-    fontSize: '36px',
-    fontWeight: 700,
-    lineHeight: 1.25,
-    fontFamily: TYPOGRAPHY.fontFamily.serif,
-    letterSpacing: '-0.02em',
+    fontSize: '56px',
+    fontWeight: 400,
+    lineHeight: 1.05,
+    fontFamily: TYPOGRAPHY.fontFamily.display,
+    letterSpacing: '-0.025em',
+    fontVariationSettings: FRAUNCES_DISPLAY,
   },
   displaySmall: {
-    fontSize: '30px',
-    fontWeight: 700,
-    lineHeight: 1.3,
-    fontFamily: TYPOGRAPHY.fontFamily.serif,
-    letterSpacing: '-0.015em',
+    fontSize: '40px',
+    fontWeight: 400,
+    lineHeight: 1.1,
+    fontFamily: TYPOGRAPHY.fontFamily.display,
+    letterSpacing: '-0.02em',
+    fontStyle: 'italic',
+    fontVariationSettings: FRAUNCES_DISPLAY,
   },
 
-  // Headings
+  // Headings — Fraunces for big, Inter for utility
   headingXl: {
-    fontSize: '24px',
-    fontWeight: 700,
-    lineHeight: 1.35,
-    fontFamily: TYPOGRAPHY.fontFamily.sans,
-    letterSpacing: '-0.01em',
+    fontSize: '32px',
+    fontWeight: 500,
+    lineHeight: 1.15,
+    fontFamily: TYPOGRAPHY.fontFamily.display,
+    letterSpacing: '-0.015em',
+    fontVariationSettings: FRAUNCES_TEXT,
   },
   headingLg: {
-    fontSize: '20px',
-    fontWeight: 700,
-    lineHeight: 1.4,
-    fontFamily: TYPOGRAPHY.fontFamily.sans,
+    fontSize: '24px',
+    fontWeight: 500,
+    lineHeight: 1.25,
+    fontFamily: TYPOGRAPHY.fontFamily.display,
     letterSpacing: '-0.01em',
+    fontVariationSettings: FRAUNCES_TEXT,
   },
   headingMd: {
-    fontSize: '18px',
+    fontSize: '20px',
     fontWeight: 600,
-    lineHeight: 1.4,
+    lineHeight: 1.3,
     fontFamily: TYPOGRAPHY.fontFamily.sans,
     letterSpacing: '-0.005em',
   },
   headingSm: {
     fontSize: '16px',
     fontWeight: 600,
-    lineHeight: 1.5,
+    lineHeight: 1.4,
     fontFamily: TYPOGRAPHY.fontFamily.sans,
   },
   headingXs: {
     fontSize: '14px',
     fontWeight: 600,
-    lineHeight: 1.5,
+    lineHeight: 1.4,
     fontFamily: TYPOGRAPHY.fontFamily.sans,
   },
 
-  // Body: Premium reading experience
+  // Body — Inter, generous line-height for breath
   bodyLg: {
-    fontSize: '16px',
+    fontSize: '17px',
     fontWeight: 400,
-    lineHeight: 1.6,
+    lineHeight: 1.65,
     fontFamily: TYPOGRAPHY.fontFamily.sans,
     letterSpacing: '-0.005em',
   },
   bodyMd: {
-    fontSize: '14px',
+    fontSize: '15px',
     fontWeight: 400,
     lineHeight: 1.6,
     fontFamily: TYPOGRAPHY.fontFamily.sans,
@@ -318,37 +367,41 @@ export const TEXT_STYLES = {
     fontFamily: TYPOGRAPHY.fontFamily.sans,
   },
 
-  // Label: UI labels
+  // Labels
   labelMd: {
     fontSize: '14px',
     fontWeight: 500,
-    lineHeight: 1.5,
+    lineHeight: 1.4,
     fontFamily: TYPOGRAPHY.fontFamily.sans,
   },
   labelSm: {
     fontSize: '13px',
     fontWeight: 500,
-    lineHeight: 1.5,
-    fontFamily: TYPOGRAPHY.fontFamily.sans,
-  },
-
-  // Caption: Small metadata
-  caption: {
-    fontSize: '12px',
-    fontWeight: 500,
     lineHeight: 1.4,
     fontFamily: TYPOGRAPHY.fontFamily.sans,
   },
-  captionSmall: {
+
+  // Caption — uppercase tracked, editorial metadata
+  caption: {
     fontSize: '11px',
-    fontWeight: 500,
+    fontWeight: 600,
+    lineHeight: 1.4,
+    fontFamily: TYPOGRAPHY.fontFamily.sans,
+    letterSpacing: '0.08em',
+    textTransform: 'uppercase',
+  },
+  captionSmall: {
+    fontSize: '10px',
+    fontWeight: 600,
     lineHeight: 1.3,
     fontFamily: TYPOGRAPHY.fontFamily.sans,
+    letterSpacing: '0.1em',
+    textTransform: 'uppercase',
   },
 }
 
 // ─────────────────────────────────────────────────────────────
-// SPACING — 4px GRID (PREMIUM BREATHING ROOM)
+// SPACING — 4px grid, generous breathing room
 // ─────────────────────────────────────────────────────────────
 
 export const SPACING = {
@@ -370,6 +423,10 @@ export const SPACING = {
   24: '96px',
   28: '112px',
   32: '128px',
+  40: '160px',
+  48: '192px',
+  56: '224px',
+  64: '256px',
 }
 
 // ─────────────────────────────────────────────────────────────
@@ -383,74 +440,78 @@ export const SIZING = {
   iconLg: '32px',
   iconXl: '48px',
 
-  buttonSmall: '32px',
-  buttonMedium: '40px',
-  buttonLarge: '48px',
+  buttonSmall: '36px',
+  buttonMedium: '44px',
+  buttonLarge: '52px',
 
-  inputSmall: '32px',
-  inputMedium: '40px',
-  inputLarge: '48px',
+  inputSmall: '36px',
+  inputMedium: '44px',
+  inputLarge: '52px',
 }
 
 // ─────────────────────────────────────────────────────────────
-// BORDER RADIUS — SUBTLE, REFINED
+// BORDER RADIUS — softer, larger
 // ─────────────────────────────────────────────────────────────
 
 export const RADIUS = {
   none: '0px',
-  sm: '4px',
-  md: '8px',
-  lg: '12px',
-  xl: '16px',
-  '2xl': '20px',
-  '3xl': '24px',
+  sm: '6px',
+  md: '10px',
+  lg: '16px',
+  xl: '24px',
+  '2xl': '32px',
+  '3xl': '48px',
   full: '9999px',
 }
 
 // ─────────────────────────────────────────────────────────────
-// SHADOWS — PREMIUM ELEVATION MODEL
+// SHADOWS — warm-toned (rgba ink, not pure black)
 // ─────────────────────────────────────────────────────────────
 
 export const SHADOWS = {
   none: 'none',
-  xs: '0 1px 2px 0 rgba(0, 0, 0, 0.05)',
-  sm: '0 1px 3px 0 rgba(0, 0, 0, 0.08), 0 1px 2px 0 rgba(0, 0, 0, 0.04)',
-  md: '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)',
-  lg: '0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)',
-  xl: '0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)',
-  '2xl': '0 25px 50px -12px rgba(0, 0, 0, 0.25)',
-  inner: 'inset 0 2px 4px 0 rgba(0, 0, 0, 0.05)',
+  xs: '0 1px 2px 0 rgba(39, 33, 27, 0.04)',
+  sm: '0 1px 3px 0 rgba(39, 33, 27, 0.06), 0 1px 2px 0 rgba(39, 33, 27, 0.04)',
+  md: '0 4px 8px -1px rgba(39, 33, 27, 0.08), 0 2px 4px -1px rgba(39, 33, 27, 0.04)',
+  lg: '0 10px 24px -4px rgba(39, 33, 27, 0.10), 0 4px 8px -2px rgba(39, 33, 27, 0.04)',
+  xl: '0 24px 40px -8px rgba(39, 33, 27, 0.12), 0 8px 16px -4px rgba(39, 33, 27, 0.04)',
+  '2xl': '0 32px 64px -16px rgba(39, 33, 27, 0.18)',
+  inner: 'inset 0 2px 4px 0 rgba(39, 33, 27, 0.04)',
 }
 
 // ─────────────────────────────────────────────────────────────
-// TRANSITIONS & ANIMATIONS — SMOOTH, PURPOSEFUL
+// MOTION — slow, intentional, "breath" easing
 // ─────────────────────────────────────────────────────────────
 
 export const TRANSITIONS = {
   micro: '100ms',
-  fast: '150ms',
-  base: '200ms',
-  slow: '300ms',
-  slower: '500ms',
+  fast: '200ms',
+  base: '300ms',
+  slow: '600ms',
+  held: '800ms',
+  slower: '1200ms',
 }
 
 export const EASING = {
-  easeOut: 'cubic-bezier(0.4, 0, 0.2, 1)',
-  easeInOut: 'cubic-bezier(0.4, 0, 0.2, 1)',
-  easeIn: 'cubic-bezier(0.4, 0, 1, 1)',
+  // Signature curve — feels like a held breath releasing
+  breath: 'cubic-bezier(0.32, 0.72, 0, 1)',
+  easeOut: 'cubic-bezier(0.32, 0.72, 0, 1)',
+  easeInOut: 'cubic-bezier(0.65, 0, 0.35, 1)',
+  easeIn: 'cubic-bezier(0.32, 0, 0.67, 0)',
   bounce: 'cubic-bezier(0.34, 1.56, 0.64, 1)',
 }
 
 export const ANIMATIONS = {
   fadeIn: `@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }`,
-  slideInUp: `@keyframes slideInUp { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }`,
-  slideInDown: `@keyframes slideInDown { from { opacity: 0; transform: translateY(-8px); } to { opacity: 1; transform: translateY(0); } }`,
-  scaleIn: `@keyframes scaleIn { from { opacity: 0; transform: scale(0.95); } to { opacity: 1; transform: scale(1); } }`,
-  pulse: `@keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.5; } }`,
+  slideInUp: `@keyframes slideInUp { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: translateY(0); } }`,
+  slideInDown: `@keyframes slideInDown { from { opacity: 0; transform: translateY(-12px); } to { opacity: 1; transform: translateY(0); } }`,
+  scaleIn: `@keyframes scaleIn { from { opacity: 0; transform: scale(0.96); } to { opacity: 1; transform: scale(1); } }`,
+  pulse: `@keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.6; } }`,
+  bloom: `@keyframes bloom { 0% { opacity: 0; transform: scale(0.85); } 100% { opacity: 1; transform: scale(1); } }`,
 }
 
 // ─────────────────────────────────────────────────────────────
-// Z-INDEX HIERARCHY
+// Z-INDEX
 // ─────────────────────────────────────────────────────────────
 
 export const Z_INDEX = {
@@ -479,7 +540,7 @@ export const BREAKPOINTS = {
 }
 
 // ─────────────────────────────────────────────────────────────
-// COMPONENT TOKENS — THEME-AWARE
+// COMPONENT TOKENS — theme-aware
 // ─────────────────────────────────────────────────────────────
 
 export const getComponentTokens = (theme = 'light') => {
@@ -495,8 +556,8 @@ export const getComponentTokens = (theme = 'light') => {
         activeBg: colors.primary[700],
         disabledBg: colors.secondary[300],
         disabledText: colors.secondary[500],
-        shadow: SHADOWS.md,
-        hoverShadow: SHADOWS.lg,
+        shadow: SHADOWS.sm,
+        hoverShadow: SHADOWS.md,
       },
       secondary: {
         bg: colors.secondary[100],
@@ -532,8 +593,8 @@ export const getComponentTokens = (theme = 'light') => {
       bg: colors.bg.primary,
       border: colors.border.default,
       text: colors.text.primary,
-      shadow: SHADOWS.md,
-      hoverShadow: SHADOWS.lg,
+      shadow: SHADOWS.sm,
+      hoverShadow: SHADOWS.md,
     },
     modal: {
       bg: colors.bg.primary,
@@ -544,7 +605,7 @@ export const getComponentTokens = (theme = 'light') => {
     tag: {
       bg: colors.primary[50],
       text: colors.primary[700],
-      border: colors.primary[300],
+      border: colors.primary[200],
     },
   }
 }
@@ -570,7 +631,6 @@ export const getCSSVariables = (theme = 'light') => {
   const colors = getThemeColors(theme)
   const vars = {}
 
-  // Color variables
   Object.entries(colors).forEach(([key, value]) => {
     if (typeof value === 'object' && !Array.isArray(value)) {
       Object.entries(value).forEach(([subKey, color]) => {
@@ -586,7 +646,6 @@ export const getCSSVariables = (theme = 'light') => {
   return vars
 }
 
-// Get contrasting text color for a background
 export const getTextColorForBg = (bgColor, theme = 'light') => {
   const colors = getThemeColors(theme)
   if (bgColor === colors.primary[500]) return colors.bg.primary
@@ -595,7 +654,7 @@ export const getTextColorForBg = (bgColor, theme = 'light') => {
 }
 
 // ─────────────────────────────────────────────────────────────
-// ICON SIZING — PHOSPHOR ICONS
+// ICON SIZING
 // ─────────────────────────────────────────────────────────────
 
 export const ICON_SIZES = {
@@ -604,56 +663,56 @@ export const ICON_SIZES = {
   md: 24,
   lg: 32,
   xl: 48,
+  '2xl': 64,
 }
 
 // ─────────────────────────────────────────────────────────────
-// SVG ILLUSTRATIONS — BESPOKE, CUSTOM-TAILORED
+// SVG ILLUSTRATIONS — bespoke, theme-reactive
+// Sun cycles, breath rhythms, lunar phases, horizons.
+// Single-line SVG strings (Rollup-safe pattern).
 // ─────────────────────────────────────────────────────────────
 
 export const getIllustration = {
+  // booking → sun cycle (concentric arcs rising from horizon, honey apex)
   booking: (colors) => {
-    const bg = colors.bg?.secondary || '#F9FAFB'
-    const border = colors.border?.default || '#E5E7EB'
-    const primary = colors.primary?.[500] || '#8B5CF6'
-    const primary50 = colors.primary?.[50] || '#F8F6FF'
-    const primary300 = colors.primary?.[300] || '#D3C3FF'
-    const accent = colors.accent?.[500] || '#22C55E'
-    const text = colors.text?.primary || '#111827'
-    return `<svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="20" y="20" width="160" height="160" rx="16" fill="${bg}" stroke="${border}" stroke-width="2"/><circle cx="60" cy="60" r="20" fill="${primary}" opacity="0.1"/><circle cx="140" cy="140" r="20" fill="${accent}" opacity="0.1"/><path d="M 40 60 L 80 80 L 100 70 L 120 85 L 160 60" stroke="${primary}" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><rect x="40" y="100" width="120" height="50" rx="8" fill="${primary50}" stroke="${primary300}" stroke-width="1.5"/><text x="100" y="125" text-anchor="middle" font-size="14" fill="${text}" font-weight="600">Schedule</text></svg>`
+    const clay = colors.primary?.[500] || '#C97B5F'
+    const clay300 = colors.primary?.[300] || '#DDA992'
+    const clay200 = colors.primary?.[200] || '#EBCBB6'
+    const honey = colors.honey || '#D4A668'
+    const ash = colors.border?.default || '#D8CFC0'
+    return `<svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M 30 130 A 70 70 0 0 1 170 130" stroke="${clay200}" stroke-width="1.5" stroke-linecap="round"/><path d="M 50 130 A 50 50 0 0 1 150 130" stroke="${clay300}" stroke-width="1.5" stroke-linecap="round"/><path d="M 70 130 A 30 30 0 0 1 130 130" stroke="${clay}" stroke-width="2" stroke-linecap="round"/><line x1="20" y1="130" x2="180" y2="130" stroke="${ash}" stroke-width="1"/><circle cx="100" cy="100" r="3" fill="${honey}"/></svg>`
   },
 
+  // routines → breath rhythm (sine wave with weighted clay strokes)
   routines: (colors) => {
-    const bg = colors.bg?.secondary || '#F9FAFB'
-    const border = colors.border?.default || '#E5E7EB'
-    const primary = colors.primary?.[500] || '#8B5CF6'
-    const accent = colors.accent?.[500] || '#22C55E'
-    const text = colors.text?.secondary || '#6B7280'
-    return `<svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="20" y="20" width="160" height="160" rx="16" fill="${bg}" stroke="${border}" stroke-width="2"/><circle cx="100" cy="100" r="60" fill="none" stroke="${primary}" stroke-width="2" opacity="0.2"/><circle cx="100" cy="100" r="40" fill="none" stroke="${accent}" stroke-width="2.5"/><circle cx="100" cy="55" r="6" fill="${primary}"/><circle cx="140" cy="100" r="6" fill="${accent}"/><circle cx="100" cy="145" r="6" fill="${primary}"/><circle cx="60" cy="100" r="6" fill="${accent}"/><text x="100" y="175" text-anchor="middle" font-size="12" fill="${text}" font-weight="500">Routines</text></svg>`
+    const clay = colors.primary?.[500] || '#C97B5F'
+    const clay300 = colors.primary?.[300] || '#DDA992'
+    const ash = colors.border?.default || '#D8CFC0'
+    return `<svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg"><line x1="20" y1="100" x2="180" y2="100" stroke="${ash}" stroke-width="1"/><path d="M 20 100 Q 50 60 80 100 T 140 100 T 200 100" stroke="${clay}" stroke-width="2" stroke-linecap="round" fill="none"/><circle cx="50" cy="65" r="3" fill="${clay}"/><circle cx="110" cy="135" r="3" fill="${clay300}"/><circle cx="170" cy="65" r="3" fill="${clay}"/></svg>`
   },
 
+  // calendar → lunar phases (5 moons, graduated fill)
   calendar: (colors) => {
-    const bg = colors.bg?.secondary || '#F9FAFB'
-    const border = colors.border?.default || '#E5E7EB'
-    const primary50 = colors.primary?.[50] || '#F8F6FF'
-    const primary200 = colors.primary?.[200] || '#E1D7FF'
-    const primary300 = colors.primary?.[300] || '#D3C3FF'
-    const primary500 = colors.primary?.[500] || '#8B5CF6'
-    const accent = colors.accent?.[500] || '#22C55E'
-    return `<svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="20" y="20" width="160" height="160" rx="16" fill="${bg}" stroke="${border}" stroke-width="2"/><rect x="40" y="40" width="120" height="110" rx="8" fill="${primary50}" stroke="${primary200}" stroke-width="1.5"/><line x1="50" y1="70" x2="150" y2="70" stroke="${primary300}" stroke-width="1"/><line x1="50" y1="90" x2="150" y2="90" stroke="${primary300}" stroke-width="1"/><circle cx="70" cy="105" r="4" fill="${accent}"/><circle cx="100" cy="105" r="4" fill="${accent}"/><circle cx="130" cy="105" r="4" fill="${accent}"/><rect x="50" y="130" width="100" height="8" rx="4" fill="${primary500}" opacity="0.3"/></svg>`
+    const clay = colors.primary?.[500] || '#C97B5F'
+    const clay300 = colors.primary?.[300] || '#DDA992'
+    const clay100 = colors.primary?.[100] || '#F5E5DA'
+    const ash = colors.border?.default || '#D8CFC0'
+    return `<svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="30" cy="100" r="12" fill="none" stroke="${ash}" stroke-width="1.5"/><circle cx="65" cy="100" r="12" fill="${clay100}" stroke="${clay300}" stroke-width="1.5"/><circle cx="100" cy="100" r="12" fill="${clay}"/><circle cx="135" cy="100" r="12" fill="${clay100}" stroke="${clay300}" stroke-width="1.5"/><circle cx="170" cy="100" r="12" fill="none" stroke="${ash}" stroke-width="1.5"/></svg>`
   },
 
+  // success → sun bloom (linen halo + clay sun + honey ring)
   success: (colors) => {
-    const accent50 = colors.accent?.[50] || '#F0FDF4'
-    const accent300 = colors.accent?.[300] || '#86EFAC'
-    const accent500 = colors.accent?.[500] || '#22C55E'
-    return `<svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="100" cy="100" r="80" fill="${accent50}" stroke="${accent300}" stroke-width="2"/><path d="M 70 100 L 90 120 L 135 75" stroke="${accent500}" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>`
+    const clay = colors.primary?.[500] || '#C97B5F'
+    const honey = colors.honey || '#D4A668'
+    const linen = colors.linen || '#F5E5DA'
+    const clay100 = colors.primary?.[100] || '#F5E5DA'
+    return `<svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="100" cy="100" r="90" fill="${linen}" opacity="0.5"/><circle cx="100" cy="100" r="70" fill="none" stroke="${honey}" stroke-width="1" opacity="0.6"/><circle cx="100" cy="100" r="50" fill="${clay100}"/><circle cx="100" cy="100" r="38" fill="${clay}"/></svg>`
   },
 
+  // empty → single horizon (ash line + smoke crescent moon)
   empty: (colors) => {
-    const bg = colors.bg?.secondary || '#F9FAFB'
-    const border = colors.border?.default || '#E5E7EB'
-    const primary100 = colors.primary?.[100] || '#F0EBFF'
-    const text = colors.text?.secondary || '#6B7280'
-    return `<svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="20" y="20" width="160" height="160" rx="16" fill="${bg}" stroke="${border}" stroke-width="2" stroke-dasharray="5,5" opacity="0.5"/><circle cx="100" cy="80" r="30" fill="${primary100}" opacity="0.3"/><path d="M 90 70 Q 100 75 110 70" stroke="${text}" stroke-width="2" fill="none" stroke-linecap="round"/><line x1="95" y1="85" x2="105" y2="85" stroke="${text}" stroke-width="1.5"/></svg>`
+    const smoke = colors.text?.secondary || '#8C8074'
+    const ash = colors.border?.default || '#D8CFC0'
+    return `<svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg"><line x1="20" y1="130" x2="180" y2="130" stroke="${ash}" stroke-width="1"/><path d="M 110 80 A 18 18 0 1 1 110 116 A 14 14 0 1 0 110 80 Z" fill="${smoke}" opacity="0.5"/></svg>`
   },
 }

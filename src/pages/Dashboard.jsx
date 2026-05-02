@@ -3,7 +3,7 @@ import { supabase } from '../lib/supabase'
 import { getThemeColors, getComponentTokens, TEXT_STYLES, SPACING, RADIUS, SHADOWS, TRANSITIONS, EASING, ICON_SIZES } from '../lib/design-system'
 import { ThemeContext } from '../lib/theme-context'
 import { RoutinesIllustration, BookingIllustration, CalendarIllustration } from '../components/Illustrations'
-import { SignOut, Moon, Sun, Clock, Link as LinkIcon, TrendingUp } from 'phosphor-react'
+import { SignOut, Moon, Sun, Clock, Link as LinkIcon } from 'phosphor-react'
 
 export default function Dashboard({ session }) {
   const { theme, toggleTheme, colors } = useContext(ThemeContext) || { theme: 'light', toggleTheme: () => {}, colors: {} }
