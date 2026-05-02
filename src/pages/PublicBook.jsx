@@ -529,7 +529,7 @@ export default function PublicBook() {
                 fontSize: TEXT_STYLES.bodySm.fontSize,
               }}
             >
-              📅 {FULL_DAYS[dayOfWeek]}, {MONTHS[selected.getMonth()]} {selected.getDate()} at {chosenSlot} · {av.slotDuration}{' '}
+              {FULL_DAYS[dayOfWeek]}, {MONTHS[selected.getMonth()]} {selected.getDate()} at {chosenSlot} · {av.slotDuration}{' '}
               min
             </div>
 

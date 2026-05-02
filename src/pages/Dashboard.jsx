@@ -2,8 +2,8 @@ import { useState, useEffect, useContext } from 'react'
 import { supabase } from '../lib/supabase'
 import { getThemeColors, getComponentTokens, TEXT_STYLES, SPACING, RADIUS, SHADOWS, TRANSITIONS, EASING, ICON_SIZES } from '../lib/design-system'
 import { ThemeContext } from '../lib/theme-context'
-import { RoutinesIllustration, BookingIllustration, CalendarIllustration } from '../components/Illustrations'
-import { SignOut, Moon, Sun, Clock, Link as LinkIcon } from 'phosphor-react'
+import { RoutinesIllustration, BookingIllustration, CalendarIllustration, Lockup, MoonGlyph, SunGlyph } from '../components/Illustrations'
+import { SignOut, Clock, Link as LinkIcon } from 'phosphor-react'
 
 export default function Dashboard({ session }) {
   const { theme, toggleTheme, colors } = useContext(ThemeContext) || { theme: 'light', toggleTheme: () => {}, colors: {} }
@@ -60,20 +60,17 @@ export default function Dashboard({ session }) {
           }}
         >
           <div>
-            <h1
-              style={{
-                ...TEXT_STYLES.headingXl,
-                color: colors.text?.primary,
-                margin: 0,
-              }}
-            >
-              📅 Caloday
-            </h1>
+            <Lockup
+              size="md"
+              color={colors.text?.primary}
+              mark={colors.primary?.[500] || '#C97B5F'}
+              line={colors.text?.primary}
+            />
             <p
               style={{
                 ...TEXT_STYLES.bodySm,
                 color: colors.text?.secondary,
-                margin: `${SPACING[1]} 0 0 0`,
+                margin: `${SPACING[2]} 0 0 0`,
               }}
             >
               {session?.user?.email}
@@ -107,9 +104,9 @@ export default function Dashboard({ session }) {
               }}
             >
               {theme === 'light' ? (
-                <Moon size={ICON_SIZES.md} weight="duotone" />
+                <MoonGlyph size={ICON_SIZES.md} color={colors.text?.primary || '#27211B'} />
               ) : (
-                <Sun size={ICON_SIZES.md} weight="duotone" />
+                <SunGlyph size={ICON_SIZES.md} color={colors.text?.primary || '#F5F1EA'} />
               )}
             </button>
 

@@ -1,7 +1,8 @@
 import { useState, useContext } from 'react'
 import { supabase } from '../lib/supabase'
-import { getThemeColors, getComponentTokens, TEXT_STYLES, SPACING, RADIUS, SHADOWS, TRANSITIONS, EASING } from '../lib/design-system'
+import { getThemeColors, getComponentTokens, TEXT_STYLES, SPACING, RADIUS, SHADOWS, TRANSITIONS, EASING, ICON_SIZES } from '../lib/design-system'
 import { ThemeContext } from '../lib/theme-context'
+import { Brandmark, Wordmark, MoonGlyph, SunGlyph, LetterGlyph, SunCycleGlyph } from '../components/Illustrations'
 
 export default function Auth() {
   const { theme, colors, toggleTheme } = useContext(ThemeContext) || { theme: 'light', colors: {}, toggleTheme: () => {} }
@@ -86,7 +87,11 @@ export default function Auth() {
           e.target.style.boxShadow = SHADOWS.sm
         }}
       >
-        {theme === 'light' ? '🌙' : '☀️'}
+        {theme === 'light' ? (
+          <MoonGlyph size={ICON_SIZES.md} color={colors.text?.primary || '#27211B'} />
+        ) : (
+          <SunGlyph size={ICON_SIZES.md} color={colors.text?.primary || '#F5F1EA'} />
+        )}
       </button>
 
       {/* Decorative background elements */}
@@ -137,56 +142,43 @@ export default function Auth() {
           transition: `all ${TRANSITIONS.slow} ${EASING.easeInOut}`,
         }}
       >
-        {/* Header */}
-        <div style={{ textAlign: 'center', marginBottom: SPACING[8] }}>
-          {/* Premium Logo Badge */}
+        {/* Header — Brandmark stands alone, wordmark below as editorial moment */}
+        <div style={{ textAlign: 'center', marginBottom: SPACING[10] }}>
           <div
             style={{
-              width: '60px',
-              height: '60px',
-              borderRadius: RADIUS.lg,
-              background: colors.gradients.primary,
               display: 'flex',
-              alignItems: 'center',
               justifyContent: 'center',
-              color: colors.bg.primary,
-              fontSize: '32px',
-              fontWeight: 700,
-              margin: `0 auto ${SPACING[4]}`,
-              boxShadow: SHADOWS.lg,
-              transition: `transform ${TRANSITIONS.base} ${EASING.easeOut}`,
-            }}
-            onMouseEnter={(e) => {
-              e.target.style.transform = 'scale(1.08)'
-            }}
-            onMouseLeave={(e) => {
-              e.target.style.transform = 'scale(1)'
+              marginBottom: SPACING[5],
             }}
           >
-            📅
+            <Brandmark
+              size={56}
+              color={colors.primary?.[500] || '#C97B5F'}
+              line={colors.text?.primary || '#27211B'}
+              lineOpacity={0.4}
+            />
           </div>
 
           <h1
             style={{
               ...TEXT_STYLES.displaySmall,
               color: colors.text.primary,
-              marginBottom: SPACING[2],
-              margin: `0 0 ${SPACING[2]} 0`,
+              margin: 0,
             }}
           >
-            Caloday
+            <Wordmark size="lg" color={colors.text?.primary} />
           </h1>
 
           <p
             style={{
               ...TEXT_STYLES.bodyMd,
               color: colors.text.secondary,
-              marginTop: SPACING[2],
+              marginTop: SPACING[3],
             }}
           >
             {mode === 'login'
-              ? 'Welcome back. Your time, refined.'
-              : 'Begin your journey to timeless scheduling.'}
+              ? 'The still hour. Welcome back.'
+              : 'A sanctuary for your time. Begin.'}
           </p>
         </div>
 
@@ -199,7 +191,15 @@ export default function Auth() {
               animation: `scaleIn ${TRANSITIONS.slow} ${EASING.easeOut}`,
             }}
           >
-            <div style={{ fontSize: '48px', marginBottom: SPACING[4] }}>✉️</div>
+            <div style={{ display: 'flex', justifyContent: 'center', marginBottom: SPACING[5] }}>
+              <LetterGlyph
+                size={80}
+                paper={colors.bg?.secondary || '#F5F1EA'}
+                edge={colors.border?.default || '#D8CFC0'}
+                seal={colors.primary?.[500] || '#C97B5F'}
+                fold={colors.text?.tertiary || '#B5A99A'}
+              />
+            </div>
 
             <h2
               style={{
